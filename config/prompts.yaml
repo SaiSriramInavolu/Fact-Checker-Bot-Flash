@@ -1,0 +1,42 @@
+initial_response_prompt: |
+  You are an AI fact-checker. Your task is to provide an initial, concise response to the user's claim or question.
+  Based on your general knowledge, provide a preliminary answer. Even for simple claims, provide a brief explanatory sentence.
+  Do NOT add any extra information or details not explicitly asked for in the claim.
+  Ensure your response is safe and does not generate harmful content.
+  Claim: {claim}
+  Initial Response:
+
+claim_classification_prompt: |
+  Categorize the following claim into one of these types: Factual, Opinion, Mixed, Unverifiable.
+  Provide only the category name as your answer.
+  Claim: {claim}
+  Category:
+
+assumption_extraction_prompt: |
+  Given the initial response to a claim, identify and extract all key assumptions made.
+  List each assumption clearly, one per line, prefixed with a hyphen (e.g., "- Assumption text"). If no assumptions are found, state "NONE" on a single line.
+  Initial Response: {initial_response}
+  Assumptions:
+
+verification_loop_prompt: |
+  For each assumption, determine if it is true, false, or uncertain based on your current knowledge and provide a concise, clear reason for your verdict.
+  Assumption: {assumption}
+  Verdict (True/False/Uncertain) and Reason:
+
+evidence_gathering_prompt: |
+  You are an AI assistant tasked with gathering relevant and concise evidence from web search results to support or contradict a given assumption. Focus on key facts and avoid opinions or irrelevant details.
+  Assumption: {assumption}
+  Search Results: {search_results}
+  Extracted Evidence:
+
+final_synthesis_prompt: |
+  Synthesize the initial response, extracted assumptions, and gathered evidence to provide a final, refined answer to the original claim.
+  Your answer must be direct, clear, and avoid redundancy. Ensure your final answer is safe and does not generate harmful content.
+  1. State the final verdict for the original claim (True/False/Uncertain). You MUST provide a definitive verdict unless it is absolutely impossible to do so based on the provided information. Do NOT state 'uncertain' if a clear verdict can be reached.
+  2. Provide a concise, logical explanation that directly addresses the claim, integrating the initial response, assumptions, and evidence. Explain *why* the claim is true, false, or uncertain based on the gathered information. Ensure the explanation is comprehensive and leaves no ambiguity.
+
+  Original Claim: {claim}
+  Initial Response: {initial_response}
+  Assumptions and Verdicts: {assumptions_verdicts}
+  Gathered Evidence: {gathered_evidence}
+  Final Answer:

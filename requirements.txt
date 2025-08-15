@@ -1,0 +1,9 @@
+langchain>=0.1.0
+streamlit>=1.25.0
+python-dotenv
+requests
+beautifulsoup4
+duckduckgo-search
+langchain-google-genai
+pytest
+PyYAML

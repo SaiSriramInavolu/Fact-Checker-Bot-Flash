@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+.venv/
+venv/
+env/
+.env.*
+!/.env.example # Keep the example file
+
+# IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+.Trashes
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
