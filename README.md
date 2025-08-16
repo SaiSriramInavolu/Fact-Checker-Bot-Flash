@@ -120,13 +120,13 @@ pytest tests/
 ```
 
 ## Screenshots
-![alt text](data\ss1.png)
+![alt text](.\data\ss1.png)
 
-![alt text](data\ss1-2.png)
+![alt text](.\data\ss1-2.png)
 
-![alt text](data\ss1-3.png)
+![alt text](.\data\ss1-3.png)
 
-![alt text](data\ss2.png)
+![alt text](.\data\ss2.png)
 
 
 ### Streamlit Interface
